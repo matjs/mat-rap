@@ -1,9 +1,9 @@
 {
   "name": "mat-rap",
-  "description": "mat middleware for get rap data",
+  "description": "获取rap模拟数据的mat插件",
   "version": "0.0.1",
   "repository": {
-    "url": "https://github.com/naij/mat-rap"
+    "url": "https://github.com/matjs/mat-rap"
   },
   "author": {
     "name": "naij"
@@ -18,7 +18,7 @@
   },
   "licenses": "MIT",
   "bugs": {
-    "url": "https://github.com/naij/mat-rap/issues"
+    "url": "https://github.com/matjs/mat-rap/issues"
   },
-  "homepage": "https://github.com/naij/mat-rap"
+  "homepage": "https://github.com/matjs/mat-rap"
 }
