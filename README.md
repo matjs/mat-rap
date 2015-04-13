@@ -28,6 +28,10 @@ mat.task('default', function () {
 })
 ```
 
+```sh
+mat default
+```
+
 ## Options
 
 - `projectId`
