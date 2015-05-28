@@ -15,15 +15,15 @@ var mat = require('mat')
 var rap = require('mat-rap')
 
 mat.task('default', function () {
-  mat.use(rap({
-    projectId: '123',
-    ext: ['.json', '.do']
-  }))
+  mat.url([/\.json/])
+    .use(rap({
+      projectId: '700'
+    }))
 })
 ```
 
 ```sh
-mat default
+mat
 ```
 
 ## Options
@@ -33,9 +33,3 @@ mat default
   type: number
 
   Rap平台对应建立的项目id
-
-- `ext`
-  
-  type: array
-
-  调用的数据接口的后缀名，默认为`['.json']`
