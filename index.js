@@ -5,7 +5,7 @@ const rapAPIPrefixMap = {
 
 function rap(opts) {
   return function* rap(next) {
-    let rapVersion = opts.rapVersion || '2' //默认用rap2
+    let rapVersion = opts.rapVersion || '1' //默认用rap1
     let rapAPIPrefix = rapAPIPrefixMap[rapVersion]
 
     //rap2
