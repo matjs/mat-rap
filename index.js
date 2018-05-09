@@ -3,20 +3,26 @@ const rapAPIPrefixMap = {
   2: 'rap2api.alibaba-inc.com/app/mock/'
 }
 
+const minimist = require('minimist')
+const argv = minimist(process.argv.slice(2))
+
 function rap(opts) {
   return function* rap(next) {
     let rapVersion = opts.rapVersion || '2' //默认用rap2
     let rapAPIPrefix = rapAPIPrefixMap[rapVersion]
 
+    //RAP项目id来自于命令行参数-i，其次取opts里的配置
+    const projectId = argv.i || opts.projectId || ''
+
     //rap2
     if (rapVersion == '2') {
       this.protocolAlias = 'https'
-      this.proxyPass = `${rapAPIPrefix + opts.projectId}/${this.request.method}`
+      this.proxyPass = `${rapAPIPrefix + projectId}/${this.request.method}`
       this.request.method = 'GET'
       this.isChangeOrigin = true //https需要设置header.host
     } else {
       //rap1
-      this.proxyPass = rapAPIPrefix + opts.projectId
+      this.proxyPass = rapAPIPrefix + projectId
     }
 
     yield next

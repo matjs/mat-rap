@@ -1,12 +1,15 @@
 {
   "name": "mat-rap",
   "description": "获取rap模拟数据的mat插件",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "repository": {
     "url": "https://github.com/matjs/mat-rap"
   },
   "author": {
     "name": "naij"
+  },
+  "dependencies": {
+    "minimist": "1.1.1"
   },
   "engines": {
     "node": ">=0.12.0",
