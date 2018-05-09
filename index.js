@@ -6,7 +6,7 @@ const rapAPIPrefixMap = {
 const minimist = require('minimist')
 const argv = minimist(process.argv.slice(2))
 
-function rap(opts) {
+function rap(opts = {}) {
   return function* rap(next) {
     let rapVersion = opts.rapVersion || '2' //默认用rap2
     let rapAPIPrefix = rapAPIPrefixMap[rapVersion]
