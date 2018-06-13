@@ -1,7 +1,7 @@
 {
   "name": "mat-rap",
   "description": "获取rap模拟数据的mat插件",
-  "version": "0.0.11",
+  "version": "1.0.0",
   "repository": {
     "url": "https://github.com/matjs/mat-rap"
   },
