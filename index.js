@@ -14,6 +14,7 @@ function rap(opts = {}) {
     //RAP项目id来自于命令行参数-i，其次取opts里的配置
     const projectId = argv.i || opts.projectId || ''
     this.isRap = true //标识现在是rap请求
+    this.rapProjectId = projectId
 
     //rap2
     if (rapVersion == '2') {
