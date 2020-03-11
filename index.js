@@ -20,7 +20,7 @@ function rap(opts = {}) {
     if (rapVersion == '2') {
       this.protocolAlias = 'https'
       this.proxyPass = `${rapAPIPrefix + projectId}/${this.request.method}`
-      this.request.method = 'GET'
+      // this.request.method = 'GET'
       this.isChangeOrigin = true //https需要设置header.host
     } else {
       //rap1
